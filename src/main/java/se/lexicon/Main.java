@@ -3,7 +3,9 @@ package se.lexicon;
 public class Main {
     public static void main(String[] args) {
 
-        Customer simon = new Customer("Simon Elbrink","simon@lexicon.se", "1234567890");
+        Address nygatan = new Address("Nygatan 8","36073", "Lenhovda","Sverige");
+
+        Customer simon = new Customer("Simon Elbrink","simon@lexicon.se", "1234567890", nygatan);
 
         BankAccount simonsFirstAccount = new BankAccount(1_000_000, simon);
 

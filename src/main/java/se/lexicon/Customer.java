@@ -6,10 +6,19 @@ public class Customer {
     private String email;
     private String phoneNumber;
 
+    private Address address; // Address Relationship
+
     public Customer(String name, String email, String phoneNumber) {
         this.name = name;
         this.email = email;
         this.phoneNumber = phoneNumber;
+    }
+
+    public Customer(String name, String email, String phoneNumber, Address address) {
+        this.name = name;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+        this.address = address;
     }
 
     public String getName() {
@@ -36,12 +45,21 @@ public class Customer {
         this.phoneNumber = phoneNumber;
     }
 
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
+    }
+
     @Override
     public String toString() {
         return "Customer{" +
                 "name='" + name + '\'' +
                 ", email='" + email + '\'' +
                 ", phoneNumber='" + phoneNumber + '\'' +
+                ", address=" + address +
                 '}';
     }
 }
