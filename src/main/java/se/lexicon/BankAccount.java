@@ -4,9 +4,9 @@ public class BankAccount {
 
     //Instance Fields, AccountNumber, Balance, Name, email, PhoneNumber
 
-    private static int accountNumberSequencer = 9_000_000; // Static field is shared in all instances of BankAccounts.
+    private static int accountNumberSequencer = 0; // Static field is shared in all instances of BankAccounts.
 
-    private int accountNumber; //8003-5,865 965 558 845  // 20 // 21
+    private int accountNumber;   // 1,2,3,4,5,6,7,8,9,10,11,...
     private double balance;
     private Customer customer; // Relationship
 
