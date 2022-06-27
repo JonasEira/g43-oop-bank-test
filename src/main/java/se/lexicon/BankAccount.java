@@ -8,24 +8,13 @@ public class BankAccount {
 
     private int accountNumber; //8003-5,865 965 558 845  // 20 // 21
     private double balance;
-    private String name;
-    private String email;
-    private String phoneNumber;
+    private Customer customer; // Relationship
 
     //Constructor - for Creating an object.
-    public BankAccount(int accountNumber, double balance, String name, String email, String phoneNumber){
-        this.accountNumber = accountNumber;
-        this.balance = balance;
-        this.name = name;
-        this.email = email;
-        this.phoneNumber = phoneNumber;
-    }
-    public BankAccount(double balance, String name, String email, String phoneNumber){
+    public BankAccount(double balance, Customer customer){
         this.accountNumber = ++accountNumberSequencer;
         this.balance = balance;
-        this.name = name;
-        this.email = email;
-        this.phoneNumber = phoneNumber;
+        this.customer = customer;
     }
 
     //Custom Methods
@@ -69,28 +58,12 @@ public class BankAccount {
         this.balance = balance;
     }
 
-    public String getName() {
-        return name;
+    public Customer getCustomer() {
+        return customer;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
     }
 
     @Override
@@ -98,9 +71,7 @@ public class BankAccount {
         return "BankAccount{" +
                 "accountNumber=" + accountNumber +
                 ", balance=" + balance +
-                ", name='" + name + '\'' +
-                ", email='" + email + '\'' +
-                ", phoneNumber='" + phoneNumber + '\'' +
+                ", customer=" + customer +
                 '}';
     }
 }

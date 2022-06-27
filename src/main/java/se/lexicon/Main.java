@@ -3,9 +3,9 @@ package se.lexicon;
 public class Main {
     public static void main(String[] args) {
 
-        BankAccount simonsFirstAccount = new BankAccount(
-                1_000_000,
-                "Simon Elbrink","simon@lexicon.se", "1234567890");
+        Customer simon = new Customer("Simon Elbrink","simon@lexicon.se", "1234567890");
+
+        BankAccount simonsFirstAccount = new BankAccount(1_000_000, simon);
 
         simonsFirstAccount.withdraw(300_000);
 
@@ -24,8 +24,7 @@ public class Main {
 //        simonsFirstAccount.setAccountNumber(10); // Updates / set the Account number to a new value.
 
 
-        BankAccount simonsSecondAccount = new BankAccount( 0,
-                "Simon Elbrink","simon@lexicon.se", "1234567890");
+        BankAccount simonsSecondAccount = new BankAccount(0, simon);
 
 
         System.out.println(simonsFirstAccount.getAccountNumber());      //1
