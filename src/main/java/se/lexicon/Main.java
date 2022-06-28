@@ -26,14 +26,12 @@ public class Main {
 //        simonsFirstAccount.setAccountNumber(10); // Updates / set the Account number to a new value.
 
 
-        BankAccount simonsSecondAccount = new BankAccount(0, simon);
+        BankAccount simonsSecondAccount = new ActualSwischAccount(0, simon);
 
 
         System.out.println(simonsFirstAccount.getAccountNumber());      //1
-        System.out.println(simonsSecondAccount.getAccountNumber());     //2
+        System.out.println(simonsSecondAccount.getAccountNumber() + " " + simonsSecondAccount.getClass().getSimpleName());     //2
 
-
-        System.out.println(simonsFirstAccount);
 //        System.out.println(simonsFirstAccount.toString());
 
 
